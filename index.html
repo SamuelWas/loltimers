@@ -1,11 +1,105 @@
----
-layout: post
-title: Blogging Like a Hacker
----
 <!DOCTYPE html>
 <html>
-<body>
-    <h1>Hello World</h1>
-    <p>Estou no GitHub Pages!</p>
-</body>
+    <head>
+        <meta charset = 'utf-8'>
+        <title>LoLTimers</title>
+        <style>
+            body {
+                background-color : black;
+                color: white;
+            }
+            h1 {
+                text-align: center;
+                font-size : 40px;
+            }
+            h2 {
+                text-align: center;
+                color: grey
+            }
+            .timer {
+                font-size: 80px;
+                background-color: blue;
+                margin: auto;
+                color : yellowgreen;
+                padding: 10px;
+                border-radius: 10px;
+                width: 60rem;
+            }
+            .container {
+                text-align: center;
+                background-color: transparent;
+            }
+            .timer-input {
+                margin-top: 20px;
+                text-align: center;
+            }
+            .button {
+                width: 200px;
+                height: 50px;
+                font-size: 30px;
+                cursor: pointer;
+                border: 1px solid blue;
+            }
+            .button:hover {
+                background-color: gray;
+                
+                margin: 0px;
+            }
+            
+           
+        </style>
+    </head>
+    <body>
+        <h1>LoL Timers</h1>
+        <h2>Um temporizador de League of Legends para noobs</h2>
+        <div class = "container">
+            <div class = "timer">
+                <span class = "minutes"></span>
+                <span>:</span>
+                <span class = "seconds"></span>
+            </div>
+            <div class = "timer-input">
+                <input type="button" class = "button" value="Start" onclick="startTimer()">
+            </div>
+        </div>
+    </body>
+
+    <script>
+        let startMinutes = 5;
+        let startSeconds = 10;
+
+        startMinutes = startMinutes.toString();
+        startSeconds = startSeconds.toString();
+        if(startMinutes.length < 2)
+            startMinutes = '0' + startMinutes
+        if(startSeconds.length < 2)
+            startSeconds = '0' + startSeconds
+
+        document.querySelector('.minutes').innerHTML = startMinutes;
+        document.querySelector('.seconds').innerHTML = startSeconds;
+
+        let startTime = (1000 * 60) * startMinutes + (1000) * startSeconds
+        let delay = 1;
+
+        function startTimer() {
+            date = Date.now();
+            startTimer = setInterval(function() { updateTimer(date); }, delay);
+        }
+
+        function updateTimer(date) {
+            let now = Date.now();
+            let difference = now - date;
+            let actualTime = startTime - difference;
+            actualTime = new Date(actualTime)
+
+            let minutes = actualTime.getMinutes().toString();
+            let seconds = actualTime.getSeconds().toString();
+            if(minutes.length < 2)
+                minutes = '0' + minutes
+            if(seconds.length < 2)
+                seconds = '0' + seconds
+            document.querySelector('.minutes').innerHTML = minutes;
+            document.querySelector('.seconds').innerHTML = seconds;
+        }
+    </script>
 </html>
