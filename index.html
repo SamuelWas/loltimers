@@ -65,39 +65,45 @@
     </body>
 
     <script>
-        let startMinutes = 5;
-        let startSeconds = 10;
-
-        startMinutes = startMinutes.toString();
-        startSeconds = startSeconds.toString();
-        if(startMinutes.length < 2)
-            startMinutes = '0' + startMinutes
-        if(startSeconds.length < 2)
-            startSeconds = '0' + startSeconds
-
-        document.querySelector('.minutes').innerHTML = startMinutes;
-        document.querySelector('.seconds').innerHTML = startSeconds;
-
+        // Inicializing variables
+        let startMinutes = 0;
+        let startSeconds = 30;
         let startTime = (1000 * 60) * startMinutes + (1000) * startSeconds
-        let delay = 1;
+        
+        let timer;
+        let currtime;
 
+        setTimer(startTime);
+
+        // Functions
         function startTimer() {
-            date = Date.now();
-            startTimer = setInterval(function() { updateTimer(date); }, delay);
+            currTime = startTime;
+            timer = setInterval(function() { updateTimer(); }, 1000);
         }
 
-        function updateTimer(date) {
-            let now = Date.now();
-            let difference = now - date;
-            let actualTime = startTime - difference;
-            actualTime = new Date(actualTime)
+        function updateTimer() {
+            currTime -= 1000;
+            if(currTime >= 0)  {
+                setTimer(currTime)
+            } else {
+                setTimer(startTime)
+                clearInterval(timer);
+                startTimer();
+                return;
+            }
+        }
 
-            let minutes = actualTime.getMinutes().toString();
-            let seconds = actualTime.getSeconds().toString();
+        function setTimer(time) {
+            time = new Date(time);
+
+            let minutes = time.getMinutes().toString();
+            let seconds = time.getSeconds().toString();
+
             if(minutes.length < 2)
                 minutes = '0' + minutes
             if(seconds.length < 2)
                 seconds = '0' + seconds
+
             document.querySelector('.minutes').innerHTML = minutes;
             document.querySelector('.seconds').innerHTML = seconds;
         }
