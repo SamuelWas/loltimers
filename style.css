@@ -21,7 +21,8 @@ body {
 .main-nav a {
     color: inherit;
     text-decoration: none;
-    padding: 1.55rem;
+    font-size: 24px;
+    padding: 1.4rem;
 }
 
 .main-nav a:hover {
@@ -39,13 +40,9 @@ body {
 }
 
 .main-title {
-    position: absolute;
-    width: 1020px;
-    height: 100px;
-    left: 450px;
-    top: 140px;
-    font-size: 72px;
+    font-size: 7rem;
     font-family: Open Sans, sans-serif;
+    font-weight: 700;
     font-style: normal;
     text-align: center;
     color: #6D6AB2;
@@ -53,20 +50,22 @@ body {
 }
 
 .brand-logo-name {
-    font-size: 1.25em;
+    font-size: 30px;
     color: inherit;
     margin-left: 2rem;
+    font-weight:
 }
 
 .main-image {
     display: block;
-    margin: 150px auto;
+    margin: 300px auto;
     text-align: center;
 }
 
 .main-subtitle {
     font-family: Robot, sans-serif;
     font-weight: 300;
+    margin-top: 350px;
     text-align: center;
     color: inherit;
     font-size: 36px;
@@ -76,6 +75,11 @@ body {
     opacity: 0.5;
     display: block;
     margin: 30px auto;
+}
+
+.container {
+    display: box;
+    height: 500px;
 }
 
 .projects {
