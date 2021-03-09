@@ -1,3 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #EAEAEA;
+    font-family: Roboto, sans-serif;
+    font-size: 1.2em;
+    color: #39393C;
+}
+
+.main-nav ul{
+    display: flex;
+    list-style: none;
+}
+
+.main-nav a {
+    color: inherit;
+    text-decoration: none;
+    padding: 1.55rem;
+}
+
+.main-nav a:hover {
+    background-color: #D6D3D3;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 72px;
+    background-color: #FFFFFF;
+    padding: 0 170px;
+    filter: drop-shadow(0px 7px 4px rgba(0, 0, 0, 0.25));
+}
+
+.main-title {
+    position: absolute;
+    width: 1020px;
+    height: 100px;
+    left: 450px;
+    top: 140px;
+    font-size: 72px;
+    font-family: Open Sans, sans-serif;
+    font-style: normal;
+    text-align: center;
+    color: #6D6AB2;
+    margin: 100px auto;
+}
+
+.brand-logo-name {
+    font-size: 1.25em;
+    color: inherit;
+    margin-left: 2rem;
+}
+
+.main-image {
+    display: block;
+    margin: 150px auto;
+    text-align: center;
+}
+
+.main-subtitle {
+    font-family: Robot, sans-serif;
+    font-weight: 300;
+    text-align: center;
+    color: inherit;
+    font-size: 36px;
+}
+
+.main-icon {
+    opacity: 0.5;
+    display: block;
+    margin: 30px auto;
+}
+
 .projects {
     margin: auto 15vw;
     height: 100%;
