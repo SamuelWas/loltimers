@@ -77,11 +77,6 @@ body {
     margin: 30px auto;
 }
 
-.container {
-    display: box;
-    height: 500px;
-}
-
 .projects {
     margin: auto 30vw;
     display: grid;
