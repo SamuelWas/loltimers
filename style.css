@@ -45,8 +45,9 @@ body {
     border-radius: 10px;
     margin: -130px auto;
     width: 1000px;
-    height: 600px;
+    height: 500px;
     background-color: #EAEAEA;
+    margin-bottom: 0px;
 }
 
 .projects-container h5 {
@@ -64,6 +65,11 @@ body {
     margin: 0 auto;
 }
 
+.project:hover {
+  filter: drop-shadow(7px 7px 4px rgba(0, 0, 0, 0.25));
+  background-color: #6a1ad6;
+}
+
 .project {
     display: inline-block;
     background-color: black;
@@ -72,11 +78,69 @@ body {
     height: 150px;
 }
 
+footer {
+  text-align: center;
+  bottom: 0px;
+  height: 60px;
+  filter: drop-shadow(0   -5px 4px rgba(0, 0, 0, 0.25));
+  background-color: white;
+  margin: 0;  
+  width: 100%;
+}
+
+.github-btn {
+  position: relative;
+  display: inline-block;
+  width: 150px;
+  height: 40px;
+  background-color: #090909;
+  color: #3763D3;
+  margin: 10px auto;
+  padding: 5px 0;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
+.github-btn a {
+  position: relative;
+  padding: 20px 0;
+  font-family: Open Sans;
+  font-size: 20px;
+  text-decoration: none;
+  color: #3763D3;
+}
+
+.github-btn:hover {
+  background-color: white;
+}
+
+.linkedin-btn {
+  display: inline-block;
+  width: 150px;
+  height: 40px;
+  margin: auto 0;
+  background-color: #3763D3;
+  color: white;
+  margin: 10px auto;
+  padding: 5px 0;
+  border-radius: 10px;
+  margin-left: 10px;
+}
+
+.linkedin-btn a {
+  font-family: Open Sans;
+  text-decoration: none;
+  color: white;
+}
+
+.linkedin-btn:hover {
+  background-color: white;
+}
 
 .title-1 {
     text-align: center;
     font-family: Roboto;
-    font-size: 64px;
+    font-size: 48px;
     padding: 70px;
 }
 
